@@ -1,0 +1,24 @@
+package com.gestion.usuario.entity;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "MODULO")
+public class Modulo {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_modulo")
+    private Long id;
+
+    private String nombre;
+
+    private String descripcion;
+
+    @Column(name = "ruta_frontend")
+    private String rutaFrontend;
+}
